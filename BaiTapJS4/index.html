@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Bai1.js">
+    <link rel="stylesheet" href="./Bai2.js">
+    <link rel="stylesheet" href="./Bai3.js">
+    <link rel="stylesheet" href="./Bai4.js">
+  </head>
+  <body>
+    <div class="container" style="margin-top: 100px;">
+      <h2>Quản lý tuyển sinh</h2>
+      <div class="form-group">
+        <label for="">Điểm chuẩn</label>
+        <input type="text" name="" id="diemChuan" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="">Điểm môn 1</label>
+        <input type="text" name="" id="diemMon1" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="">Điểm môn 2</label>
+        <input type="text" name="" id="diemMon2" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="">Điểm môn 3</label>
+        <input type="text" name="" id="diemMon3" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+      <div> 
+      <h3>Khu vực</h3>
+          <ul style="list-style: none; padding-inline-start: 0;">
+            <li class="type">
+              <input type="radio" value="" id="khuVucA" name="selector" onclick="layKhuVuc()"/>
+              <label for="">Khu vực A</label>
+
+              <div class="check"></div>
+            </li>
+
+            <li class="type">
+              <input
+                type="radio"
+                value=""
+                id="khuVucB"
+                name="selector"
+                onclick="layKhuVuc()"
+              />
+              <label for="">Khu vực B</label>
+              <div class="check"></div>
+            </li>
+
+            <li class="type">
+              <input
+                type="radio"
+                value=""
+                id="khuVucC"
+                name="selector"
+                onclick="layKhuVuc()"
+              />
+              <label for="">Khu vực C</label>
+              <div class="check"></div>
+            </li>
+            <li class="type">
+              <input
+                type="radio"
+                value=""
+                id="X"
+                name="selector"
+              />
+              <label for="">Không thuộc khu vực ưu tiên</label>
+              <div class="check"></div>
+            </li>
+
+
+          </ul>
+          </div>
+
+          <div>
+          <h3>Đối tượng</h3>
+          <ul style="list-style: none; padding-inline-start: 0;">
+            <li class="type">
+              <input type="radio" value="" id="doiTuong1" name="selector1" onclick="layDoiTuong()"/>
+              <label for="">Đối tượng 1</label>
+
+              <div class="check"></div>
+            </li>
+
+            <li class="type">
+              <input
+                type="radio"
+                value=""
+                id="doiTuong2"
+                name="selector1"
+                onclick="layDoiTuong()"
+              />
+              <label for="">Đối tượng 2</label>
+              <div class="check"></div>
+            </li>
+
+            <li class="type">
+              <input
+                type="radio"
+                value=""
+                id="doiTuong3"
+                name="selector1"
+                onclick="layDoiTuong()"
+              />
+              <label for="">Đối tượng 3</label>
+              <div class="check"></div>
+            </li>
+
+            <li class="type">
+              <input
+                type="radio"
+                value=""
+                id="khongUuTien"
+                name="selector1"
+              />
+              <label for="">Không thuộc đối tượng ưu tiên</label>
+              <div class="check"></div>
+            </li>
+          </ul>
+        </div>
+
+      
+
+      <button class="btn btn-primary" id="tinhDiem">Kết quả</button>
+
+      <div class="thongBao"></div>
+    </div>
+
+
+    <div class="container" style="margin-top: 100px;">
+      <h2>Tính tiền điện</h2>
+      <div class="form-group">
+        <label for="">Họ và tên</label>
+        <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="">Số Kw điện sử dụng</label>
+        <input type="text" name="" id="soKw" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+
+     
+      <button class="btn btn-primary" onclick="tinhTienDien()">Kết quả</button>
+
+      
+    
+      </div>
+  
+
+    </div>
+
+
+    <div class="container" style="margin-top: 100px;">
+      <h2>Tính thuế thu nhập cá nhân</h2>
+      <div class="form-group">
+        <label for="">Họ và tên</label>
+        <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="">Tổng thu nhập trong một năm</label>
+        <input type="text" name="" id="thuNhap" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="">Số người phụ thuộc</label>
+        <input type="text" name="" id="pt" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted"></small>
+      </div>
+
+      <button class="btn btn-primary" onclick= "tinhThue()">Tính thuế</button>
+    </div>
+
+      
+
+
+    
+      
+    
+
+
+      
+
+    <script src="./Bai1.js"></script>
+    <script src="./Bai2.js"></script>
+    <script src="./Bai3.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
